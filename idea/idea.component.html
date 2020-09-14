@@ -1,0 +1,127 @@
+<!-- <mat-form-field hintLabel="Min 6 and Max 10 characters">
+  <input matInput #input minLength="6" maxlength="20" placeholder="Enter Your Username">
+  <mat-hint align="end">Estimate: {{(20 - input.value?.length) || 20}}</mat-hint>
+</mat-form-field>
+
+<mat-form-field>
+  <input matInput placeholder="Enter Your Email">
+  <mat-hint align="end">Fill with the valid email ^</mat-hint>
+</mat-form-field> -->
+
+<h3>New Idea</h3>
+<form class="formwidth" (ngSubmit)="onSubmit()" #myForm="ngForm">
+    <table class="fullwidth" cellspacing="0">
+        <tr>
+            <td>
+              <mat-label>Enter Project Theme </mat-label><br>
+                <mat-form-field class="fullwidth">
+                    <input matInput placeholder="Project theme name" id="project theme" [(ngModel)]="idea.name" name="firstname">
+                </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+             
+            <td>
+              <mat-label>Roots</mat-label><br>
+              <mat-form-field appearance="fill">
+                 <!-- <mat-label>Business Plan</mat-label>  -->
+                <mat-select  matInput placeholder="Business Plan" [(ngModel)]="idea.root" name="root" matNativeControl required>
+                  <mat-option  *ngFor="let r of roots"
+                  [value]="r.value">{{r.value}}
+                  </mat-option>
+                  
+                </mat-select>
+              </mat-form-field>
+          </td>&nbsp; 
+
+          <td>
+            <mat-label>Type</mat-label><br>
+            <mat-form-field appearance="fill">
+               <!-- <mat-label>Business Plan</mat-label>  -->
+              <mat-select  matInput placeholder="TDR" [(ngModel)]="idea.type" name="type" matNativeControl required>
+                <mat-option  *ngFor="let t of types"
+                [value]="t.value">{{t.value}}
+                </mat-option>
+                
+              </mat-select>
+            </mat-form-field>
+        </td>&nbsp; 
+
+        <td>
+          <mat-label>Division</mat-label><br>
+          <mat-form-field appearance="fill">
+             <!-- <mat-label>Business Plan</mat-label>  -->
+            <mat-select  matInput placeholder="Platform" [(ngModel)]="idea.division" name="division" matNativeControl required>
+              <mat-option  *ngFor="let d of divisions"
+              [value]="d.value">{{d.value}}
+              </mat-option>
+              
+            </mat-select>
+          </mat-form-field>
+      </td>&nbsp; 
+ 
+
+           
+
+            
+        <tr>
+          <td>
+            <mat-label>Category</mat-label><br>
+            <mat-form-field appearance="fill">
+               <!-- <mat-label>Business Plan</mat-label>  -->
+              <mat-select  matInput placeholder="Quality A" [(ngModel)]="idea.category" name="category" matNativeControl required>
+                <mat-option  *ngFor="let c of categories"
+                [value]="c.value">{{c.value}}
+                </mat-option>
+                
+              </mat-select>
+            </mat-form-field>
+        </td>&nbsp; 
+
+        <td>
+          <mat-label>4M</mat-label><br>
+          <mat-form-field appearance="fill">
+             <!-- <mat-label>Business Plan</mat-label>  -->
+            <mat-select  matInput placeholder="Man" [(ngModel)]="idea.fM" name="forM" matNativeControl required>
+              <mat-option  *ngFor="let f of forM"
+              [value]="f.value">{{f.value}}
+              </mat-option>
+              
+            </mat-select>
+          </mat-form-field>
+      </td>&nbsp; 
+
+          
+
+      <td>
+        <mat-label>Department</mat-label><br>
+        <mat-form-field appearance="fill">
+           <!-- <mat-label>Business Plan</mat-label>  -->
+          <mat-select  matInput placeholder="Strategy" [(ngModel)]="idea.department" name="department" matNativeControl required>
+            <mat-option  *ngFor="let d of departments"
+            [value]="d.value">{{d.value}}
+            </mat-option>
+            
+          </mat-select>
+        </mat-form-field>
+    </td>&nbsp; 
+          
+      </tr>
+      
+
+        <tr>
+          <td>
+            <mat-label>Project Need(Optional) </mat-label><br>
+              <mat-form-field class="fullwidth">
+                  <input matInput placeholder="None" id="project need" [(ngModel)]="idea.project_need" name="projectneed">
+              </mat-form-field>
+          </td>
+        </tr>
+        
+    
+    <p>
+        <button type="submit" md-raised-button>Submit</button>
+    </p>
+  
+  </table>
+</form>

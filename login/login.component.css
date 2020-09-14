@@ -1,0 +1,11 @@
+body
+{
+    /* margin: 5cm; */
+    width: 400px;
+    margin: 5cm 12cm;
+    border-bottom: 2px solid gray;
+    border:1 px gray;
+    /* border:2px solid blue; */
+    border-radius: 8px;
+
+}

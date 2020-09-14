@@ -1,0 +1,26 @@
+<p>
+  projectlist works!
+</p>
+{{allproject|json}}
+<table border="1">
+  
+    <tr>
+      <th>Project Name</th>
+      <th>Project Root</th>
+      <th>Project Category</th>
+      <th>Project Type</th>
+      <th>Project Division</th>
+      <th>Action</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let a of allproject.New_idea;let i=index">
+    <td>{{a.name}}</td>
+    <td>{{a.root}}</td>
+    <td>{{a.category}}</td>
+    <td>{{a.type}}</td>
+    <td>{{a.division}}</td>
+    <td><button (click)="delete(i)">Delete</button></td>
+    <td><button (click)="edit(i,a)">Edit</button></td>
+    
+  </tr>
+</table>

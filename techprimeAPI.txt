@@ -1,0 +1,33 @@
+Loginapi:-https://run.mocky.io/v3/a9d1047f-74a9-4965-852a-c88dee349920
+
+{
+    "employees":
+   [ {"id":1,"email":"amruta@gmail.com","password":"123"},
+{"id":2,"email":"piya@gmail.com","password":"p@12"},
+{"id":3,"email":"jay@gmail.com","password":"jay09"}]
+}
+
+
+FORM submit:-
+https://run.mocky.io/v3/e87eca8b-cb11-442a-833c-355e5de5c128
+
+{
+
+"New_idea":[
+{"name":"test1 query raised","root":"Business plan","type":"TDR","division":"Platform","category":"Quality A","fM":"man","department":"strategy",,"location":"Pune","project_need":"urgent"},
+
+
+{"name":"error check secanario","root":"Business plan","type":"FRP","division":"Refrigerator","category":"Quality B","fM":"man","department":"strategy",,"location":"Pune","project_need":"urgent"},
+
+
+{"name":"test1 query raised","root":"Business plan","type":"TDR","division":"Platform","category":"Quality A","fM":"man","department":"strategy","location":"Pune","project_need":"urgent"},
+
+
+
+
+
+{"name":"test1 query raised","root":"Business plan","type":"TDR","division":"Platform","category":"Quality A","fM":"man","department":"strategy",,"location":"Pune","project_need":"urgent"}
+
+
+]
+}
